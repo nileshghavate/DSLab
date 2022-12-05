@@ -1,3 +1,8 @@
+/* Author Aditya Kareer 
+		DBIT
+			Information technology */
+//Code is running successfully
+
 #include <stdio.h>
 
 void insert()
