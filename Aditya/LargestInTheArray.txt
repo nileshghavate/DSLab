@@ -1,0 +1,24 @@
+/* Author Aditya Kareer 
+		DBIT
+			Information technology */
+//Code is running successfully
+#include <stdio.h>
+
+int main() {
+    int array[5]={1,2,3,4,2};
+    int largest=array[0];
+    if(largest<array[1]){
+        largest=array[1];
+    }
+    if(largest<array[2]){
+        largest=array[2];
+    }
+        if(largest<array[3]){
+        largest=array[3];
+    }    if(largest<array[4]){
+        largest=array[4];
+    }
+    printf("largest number in array is %d",largest);
+
+    return 0;
+}
