@@ -1,0 +1,79 @@
+
+#include <stdio.h>
+
+void main() {
+    int array[5]={1,2,3,4,5};
+    int choice;
+    int num;
+    int del;
+    int search;
+    printf("Array is");
+    for(int i = 0 ; i<5 ; i++)
+    {
+        printf("\narray[%d] = " , i);
+        printf("%d", array[i]);
+    }
+    printf("\n");
+    printf("\nEnter Your Choice");
+    printf("\n1.INSERT");
+    printf("\n2.DELETE");
+    printf("\n3.TRAVERSE");
+    printf("\n4.SEARCH");
+    scanf("%d",&choice);
+    
+    switch(choice) 
+    {
+        case 1:
+        printf("Enter the number to insert value in array:");
+        scanf("%d",&num);
+        array[5]=num;
+        for(int i = 0 ; i<6 ; i++){
+            printf(" \n Array is %d",array[i]);
+        }
+        break;
+        
+        case 2:
+        printf("Enter the number you want to delete:");
+        scanf("%d",&del);
+        for(int i=0;i<6;i++){
+            if(del==array[i]){
+                printf("Number exists \n");
+                
+                for(i=0;i<=del;i++)
+                {
+                    array[i]=array[i+i];
+                }
+                
+            }
+        }
+                printf("\n Array after deleting is ");
+                for(int i = 0 ; i<6 ; i++)
+                {
+                    printf("\narray[%d] = " , i);
+                    printf("%d\n", array[i]);
+                }
+                break;
+        case 3:
+        printf("Traversing the array ");
+                for(int i = 0 ; i<5 ; i++)
+                {
+                    printf("\narray[%d] = " , i);
+                    printf("%d\n", array[i]);
+                }
+                break;
+        case 4:
+        printf("Enter the number you want to search");
+        scanf("%d",&search);
+        for(int i = 0 ; i<6; i++){
+            if(search==array[i]){
+                printf("Number found at %d",array[i]);
+            }
+            else {
+                printf("Number not found");
+            }
+        }
+        break;
+    
+    }
+    
+}
