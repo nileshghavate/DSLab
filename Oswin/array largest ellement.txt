@@ -1,0 +1,17 @@
+
+#include <stdio.h>
+
+void main() {
+    int elements[] = {722, 652 , 110 , 304 };
+    
+    int max = a[0];
+    
+    for (int i = 0; i<=4; i++)
+    {
+        if(elements[i]>max)
+        
+            max = a[i];
+       
+    }
+     printf("Largest Element in Array is %d\n",max );
+}

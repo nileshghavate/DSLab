@@ -1,0 +1,46 @@
+
+#include <stdio.h>
+struct student {
+    char firstName[50];
+    int roll;
+    float marks;
+} ;
+
+int main() {
+    int i , j , n ;
+    struct student s[5], temp;
+    printf("Enter information of students:\n");
+
+    //storing information
+    for (i = 0; i <= 4; ++i) {
+        printf("Enter Roll no.: ");
+        scanf("%d", &s[i].roll);
+        printf("Enter first name: ");
+        scanf("%s", s[i].firstName);
+        printf("Enter marks: ");
+        scanf("%f", &s[i].marks);
+	}
+
+    // displaying information
+    for(i=0;i< 4;i++)
+ {
+  for(j=i+1;j< 5;j++)
+  {
+   if(s[i].marks<s[j].marks)
+   {
+    temp = s[i];
+    s[i] = s[j];
+    s[j] = temp;
+   }
+  }
+ }
+ printf("Displaying the Records in Descending Order of Percentages:\n");
+ for(i=0;i< 5;i++)
+ {
+  printf("Name: %s\n", s[i].firstName);
+  printf("Roll: %d\n", s[i].roll);
+  printf("Marks: %0.2f\n\n", s[i].marks);
+ }
+ 
+}
+    
