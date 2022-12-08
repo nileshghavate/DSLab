@@ -1,0 +1,17 @@
+//Srushti Shete_DBIT_Information Technology
+#include <stdio.h>
+
+int main() {
+    int array[5]={1,2,3,4,2,6,7};
+    int array2[5]={1,2,3,4,2,7,6};
+    int size=5;
+    
+    int i;
+    for(i=0;i<size;i++){
+        if(array[i]!=array2[i]){
+            printf("array is not equal");
+        }
+    }
+    printf("Array is equal");
+    return 1;
+}
