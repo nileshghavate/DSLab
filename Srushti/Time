@@ -1,0 +1,54 @@
+//Srushti Shete_DBIT_Information Technology
+//Code is partially complete
+#include <stdio.h>
+
+struct time_struct{
+  int hour;
+  int minute;
+  int second;
+};
+
+int main()
+{
+    
+    struct time_struct  s;
+    int hour;
+    int minute;
+    int seconds;
+    
+    printf("enter hour");
+    scanf("%d",&hour);
+    printf("Enter minute");
+    scanf("%d",&minute);
+    printf("enter seconds");
+    scanf("%d",&seconds);
+    
+    s.hour = hour;
+    s.minute = minute;
+    s.second =seconds;
+    
+    printf("\n Hour is %d",s.hour);
+    printf("\n Minute is %d",s.minute);
+    printf("\n Second is %d",s.second);
+    
+        s.second++;           
+        if(s.second == 60) {
+           s.minute += 1;
+           s.second = 0;
+       }
+    
+       if(s.minute == 60) {
+           s.hour += 1;
+           s.minute = 0;
+       }
+    
+       if(s.hour == 24) {
+           s.hour = 0;
+           s.minute = 0;
+           s.second = 0;
+       }
+        
+
+
+    return 0;
+}
